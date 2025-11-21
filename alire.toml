@@ -1,0 +1,15 @@
+name = "pegui"
+description = "PegUI - Simple GUI implementation for FFmpeg."
+version = "0.1.0-dev"
+
+authors = ["Lucas Tentoni Costa"]
+maintainers = ["Lucas Tentoni Costa <lucastentoni@gmail.com>"]
+maintainers-logins = ["LTC-117"]
+licenses = "GPL-3.0"
+website = ""
+tags = ["pegui", "ffmpeg", "gui"]
+
+executables = ["pegui"]
+
+[[depends-on]]
+gtkada = "^25.0.1"
