@@ -5,7 +5,7 @@ version = "0.1.0-dev"
 authors = ["Lucas Tentoni Costa"]
 maintainers = ["Lucas Tentoni Costa <lucastentoni@gmail.com>"]
 maintainers-logins = ["LTC-117"]
-licenses = "GPL-3.0"
+licenses = "GPL-3.0-or-later"
 website = ""
 tags = ["pegui", "ffmpeg", "gui"]
 
