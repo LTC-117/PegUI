@@ -3,9 +3,11 @@ with Gtk.Main;    use Gtk.Main;
 with Glib;        use Glib;
 
 procedure Pegui is
-   Window : Gtk_Window;
-   W_Width : Gint := 800;
-   W_Height : Gint := 600;
+
+   Window   :  Gtk_Window;
+   W_Width  :  Gint := 800;
+   W_Height :  Gint := 600;
+
 begin
 
    Gtk.Main.Init;
