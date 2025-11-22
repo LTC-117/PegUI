@@ -1,10 +1,14 @@
--- This is but a test for now. Just a simple demonstration of Gtkada.
+--This is but a test for now. Just a simple demonstration of Gtkada.
 
 with Gtk.Window;  use Gtk.Window;
 with Gtk.Main;    use Gtk.Main;
 with Glib;        use Glib;
 
-procedure Pegui is
+with Pegui.Wrapper;  use Pegui.Wrapper;
+with Pegui.Widgets;  use Pegui.Widgets;
+with Pegui.UI;       use Pegui.UI;
+
+procedure Main is
 
    Window   :  Gtk_Window;
    W_Width  :  constant Gint := 800;
@@ -23,4 +27,4 @@ begin
 
    Gtk.Main.Main;
 
-end Pegui;
+end Main;
