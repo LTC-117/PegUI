@@ -11,18 +11,18 @@ package Pegui.Wrapper is
 
    FFmpeg : constant String := "ffmpeg";
 
-   type FFmpeg_Commands is record
+   --type FFmpeg_Commands is record
       -- Fill in with all possible ffmpeg commands
       -- All of them must be type 'constant Argument_List'. E.g.:
-      Start_Recording : constant Argument_List; -- := "argument list for cmd"
+      --Start_Recording : Argument_List; -- := "argument list for cmd"
       -- This is but an example. Full functional implementation soon.
       -- ...
-   end record;
+   --end record;
 
    function Check_FFmpeg return Boolean;
    -- Checks if the machine running the application has FFmpeg installed.
 
-   function Run_FFmpeg_Command (Command : FFmpeg_Commands) return Boolean;
+   --function Run_FFmpeg_Command (Command : FFmpeg_Commands) return Boolean;
    -- Runs respective FFmpeg argument passed. Must be one of the arguments
    -- listed inside 'FFmpeg_Commands' type. Returns True only if command
    -- executes successfuly.
