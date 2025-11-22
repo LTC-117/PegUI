@@ -1,5 +1,5 @@
-with Ada.Text_IO;    use Ada.Text_IO;
-with GNAT.OS_Lib;    use GNAT.OS_Lib;
+with Ada.Text_IO;       use Ada.Text_IO;
+with GNAT.OS_Lib;       use GNAT.OS_Lib;
 
 package Pegui.Wrapper is
 
