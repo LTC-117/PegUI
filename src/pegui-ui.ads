@@ -4,4 +4,6 @@ package Pegui.UI is
    -- It's gonna be responsible for all of the window functionalities,
    -- elements and characteristics. Depends on Pegui.Widgets and Pegui.Wrapper.
 
+   function Test_Pegui_UI return Boolean;
+
 end Pegui.UI;
