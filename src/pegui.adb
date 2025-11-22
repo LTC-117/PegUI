@@ -1,3 +1,5 @@
+-- This is but a test for now. Just a simple demonstration of Gtkada.
+
 with Gtk.Window;  use Gtk.Window;
 with Gtk.Main;    use Gtk.Main;
 with Glib;        use Glib;
