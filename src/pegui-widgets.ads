@@ -7,4 +7,6 @@ package Pegui.Widgets is
    -- text sizes, formats, fonts, colors and positions. It should standardize
    -- video and audio rendering types and functionalities as well.
 
+   function Test_Pegui_Widgets return Boolean;
+
 end Pegui.Widgets;
