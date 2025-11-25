@@ -1,30 +1,21 @@
---This is but a test for now. Just a simple demonstration of Gtkada.
+with Gtk.Label;    use Gtk.Label;
+with Gtk.Window;   use Gtk.Window;
+with Gtk.Widget;   use Gtk.Widget;
+with Gtk.Table;    use Gtk.Table;
+with Glib;         use Glib;
 
-with Gtk.Window;  use Gtk.Window;
-with Gtk.Main;    use Gtk.Main;
-with Glib;        use Glib;
+with Ada.Unchecked_Conversion;
+with Gdk.Event;
+with Gtk.Main;
 
+with Pegui;
 with Pegui.Wrapper;  use Pegui.Wrapper;
 with Pegui.Widgets;  use Pegui.Widgets;
 with Pegui.UI;       use Pegui.UI;
 
 procedure Main is
-
-   Window   :  Gtk_Window;
-   W_Width  :  constant Gint := 800;
-   W_Height :  constant Gint := 600;
-
 begin
 
-   Gtk.Main.Init;
-
-   Gtk.Window.Gtk_New (Window);
-   Gtk.Window.Set_Title (Window, "PegUI");
-
-   Set_Default_Size (Window => Window, Width => W_Width, Height => W_Height);
-
-   Gtk.Window.Show (Window);
-
-   Gtk.Main.Main;
+   Pegui.Pegui_Window_Init;
 
 end Main;
