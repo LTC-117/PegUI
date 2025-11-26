@@ -1,11 +1,13 @@
+with Gtk.Button;
 with Gtk.Main;
 with Gtk.Application;
 
-with Gtk.Label;    use Gtk.Label;
-with Gtk.Window;   use Gtk.Window;
-with Gtk.Widget;   use Gtk.Widget;
-with Gtk.Table;    use Gtk.Table;
-with Glib;         use Glib;
+with Gtk.Label;   use Gtk.Label;
+with Gtk.Window;  use Gtk.Window;
+with Gtk.Widget;  use Gtk.Widget;
+with Gtk.Table;   use Gtk.Table;
+with Gtk.Button;  use Gtk.Button;
+with Glib;        use Glib;
 
 with Ada.Unchecked_Conversion;
 with Gdk.Event;
@@ -27,8 +29,16 @@ package body Pegui is
           Width => Window_Width,
           Height => Window_Height);
 
-      Gtk.Window.Show (Main_Window);
-      Gtk.Main.Main;
    end Pegui_Window_Init;
+
+   -------------------------
+   -- Pegui_Window_Finish --
+   -------------------------
+
+   procedure Pegui_Window_Finish is
+   begin
+      Main_Window.Show_All;
+      Gtk.Main.Main;
+   end Pegui_Window_Finish;
 
 end Pegui;
