@@ -12,16 +12,27 @@ with Gdk.Event;
 
 package Pegui is
 
+   --  Overall, this package must implement basic types, sizes, functions and
+   --  any other thing that could be considered fundamental and basic for the
+   --  application. For now, the functions must be focused in the window.
+
+   --------------------
+   --  Application types
+
+
    -----------------------------------------
-   -- Application basic types and variables.
+   --  Application fundamental variables.
 
    Window_Height  :  constant Gint  := 500;
    Window_Width   :  constant Gint  := 800;
-   Main_Window    : Gtk_Window;
+   Main_Window    :  Gtk_Window;
+   Button         :  Gtk_Widget;
 
    ----------------------------------------------
-   -- Application basic procedures and functions.
+   --  Application basic procedures and functions.
 
    procedure Pegui_Window_Init;
+
+   procedure Pegui_Window_Finish;
 
 end Pegui;
