@@ -10,7 +10,7 @@ with Glib;         use Glib;
 with Ada.Unchecked_Conversion;
 with Gdk.Event;
 
-package Pegui is
+package Peg is
 
    --  Overall, this package must implement basic types, sizes, functions and
    --  any other thing that could be considered fundamental and basic for the
@@ -31,14 +31,14 @@ package Pegui is
    ----------------------------------------------
    --  Application basic procedures and functions.
 
-   procedure Pegui_Window_Init;
+   procedure Pegui_Begin;
    --  First part of window initialization. Responsible for initializing the
    --  basic things in the window, like size and label. Everything in between
    --  this procedure and Pegui_Window_Finish should be added to the main
    --  window no problem.
 
-   procedure Pegui_Window_Finish;
+   procedure Pegui_End;
    --  Final part of window implementation. Should run the window with whatever
    --  is added to it before this procedure is used.
 
-end Pegui;
+end Peg;

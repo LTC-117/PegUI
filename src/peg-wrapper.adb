@@ -1,4 +1,4 @@
-package body Pegui.Wrapper is
+package body Peg.Wrapper is
 
    --  TODO : Finish implementing specifications file first!
 
@@ -7,4 +7,4 @@ package body Pegui.Wrapper is
       return True;
    end Check_FFmpeg;
 
-end Pegui.Wrapper;
+end Peg.Wrapper;

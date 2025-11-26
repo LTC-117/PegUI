@@ -1,4 +1,4 @@
-package body Pegui.Widgets is
+package body Peg.Widgets is
 
    --  TODO : Finish implementing specifications file first!
 
@@ -7,4 +7,4 @@ package body Pegui.Widgets is
       return True;
    end Test_Pegui_Widgets;
 
-end Pegui.Widgets;
+end Peg.Widgets;

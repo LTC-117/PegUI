@@ -1,4 +1,4 @@
-package Pegui.Widgets is
+package Peg.Widgets is
 
    --  This package implements types and fundamental functionalities for the
    --  elements of the application's window (widgets like buttons and text).
@@ -12,4 +12,4 @@ package Pegui.Widgets is
 
    function Test_Pegui_Widgets return Boolean;
 
-end Pegui.Widgets;
+end Peg.Widgets;

@@ -1,7 +1,7 @@
 with Ada.Text_IO;       use Ada.Text_IO;
 with GNAT.OS_Lib;       use GNAT.OS_Lib;
 
-package Pegui.Wrapper is
+package Peg.Wrapper is
 
    --  This package implements a simple yet complete and fully functional wrapper
    --  for the ffmpeg media converter. It must offer a simple abstraction and
@@ -12,8 +12,7 @@ package Pegui.Wrapper is
    FFmpeg_Command_Count :  constant Positive := 10;
    FFmpeg : constant String := "ffmpeg";
 
-
    function Check_FFmpeg return Boolean;
    --  Checks if the machine running the application has FFmpeg installed.
 
-end Pegui.Wrapper;
+end Peg.Wrapper;

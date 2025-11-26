@@ -1,4 +1,4 @@
-package body Pegui.UI is
+package body Peg.UI is
 
    --  TODO : Finish implementing specifications file first!
 
@@ -7,4 +7,4 @@ package body Pegui.UI is
       return True;
    end Test_Pegui_UI;
 
-end Pegui.UI;
+end Peg.UI;

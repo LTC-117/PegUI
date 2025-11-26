@@ -1,4 +1,4 @@
-package Pegui.UI is
+package Peg.UI is
 
    --  This package implements an abstraction layer for the GUI of the app.
    --  It's gonna be responsible for all of the window functionalities,
@@ -6,4 +6,4 @@ package Pegui.UI is
 
    function Test_Pegui_UI return Boolean;
 
-end Pegui.UI;
+end Peg.UI;
