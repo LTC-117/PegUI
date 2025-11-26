@@ -1,44 +1,55 @@
-with Gtk.Button;
-with Gtk.Main;
-with Gtk.Application;
-
 with Gtk.Label;   use Gtk.Label;
 with Gtk.Window;  use Gtk.Window;
 with Gtk.Widget;  use Gtk.Widget;
 with Gtk.Table;   use Gtk.Table;
 with Gtk.Button;  use Gtk.Button;
+with Gtk.Box;     use Gtk.Box;
 with Glib;        use Glib;
+with Gtk.Menu;    use Gtk.Menu;
 
 with Ada.Unchecked_Conversion;
 with Gdk.Event;
+with Gtk.Main;
 
-package body Pegui is
+with Gtkada.Builder; use Gtkada.Builder;
+with Peg;          use Peg;
+with Peg.Wrapper;  use Peg.Wrapper;
+with Peg.Widgets;  use Peg.Widgets;
+with Peg.UI;       use Peg.UI;
 
-   -----------------------
-   -- Pegui_Window_Init --
-   -----------------------
+procedure Pegui is
 
-   procedure Pegui_Window_Init is
-   begin
-      Gtk.Main.Init;
+   Btn   :  Gtk_Button;
+   Lbl   :  Gtk_Label;
+   Box   :  Gtk_Box;
+   VBox  :  Gtk_Vbox;
+   Menu  :  Gtk_Menu;
+   Builder: Gtkada_Builder;
 
-      Gtk.Window.Gtk_New (Main_Window);
-      Gtk.Window.Set_Title (Main_Window, "PegUI");
-      Gtk.Window.Set_Default_Size
-         (Window => Main_Window,
-          Width => Window_Width,
-          Height => Window_Height);
+begin
 
-   end Pegui_Window_Init;
+   Pegui_Begin;
 
-   -------------------------
-   -- Pegui_Window_Finish --
-   -------------------------
+      Gtk_New_Vbox (Box => Vbox, Homogeneous => True);
+      Add (Main_Window, VBox);
 
-   procedure Pegui_Window_Finish is
-   begin
-      Main_Window.Show_All;
-      Gtk.Main.Main;
-   end Pegui_Window_Finish;
+      Gtk_New (Lbl, "Well well well, it works");
+      Pack_Start (In_Box => VBox,
+                  Child  => Lbl,
+                  Expand => False,
+                  Fill   => False);
+
+      Gtk_New_Hbox (Box => Box, Homogeneous => True);
+      Pack_Start (In_Box => VBox, Child => Box, Expand => False);
+
+      Gtk_New (Btn, "taquipariu");
+      Pack_Start (In_Box => Box,
+                  Child  => Btn,
+                  Expand => False,
+                  Fill   => False);
+
+      --  Pegui.Main_Window.Add (VBox);
+
+   Pegui_End;
 
 end Pegui;
