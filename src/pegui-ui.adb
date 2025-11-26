@@ -1,6 +1,6 @@
 package body Pegui.UI is
 
-   -- TODO : Finish implementing specifications file first!
+   --  TODO : Finish implementing specifications file first!
 
    function Test_Pegui_UI return Boolean is
    begin

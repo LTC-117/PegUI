@@ -1,6 +1,6 @@
 package body Pegui.Wrapper is
 
-   -- TODO : Finish implementing specifications file first!
+   --  TODO : Finish implementing specifications file first!
 
    function Check_FFmpeg return Boolean is
    begin
