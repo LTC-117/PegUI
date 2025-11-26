@@ -32,7 +32,13 @@ package Pegui is
    --  Application basic procedures and functions.
 
    procedure Pegui_Window_Init;
+   --  First part of window initialization. Responsible for initializing the
+   --  basic things in the window, like size and label. Everything in between
+   --  this procedure and Pegui_Window_Finish should be added to the main
+   --  window no problem.
 
    procedure Pegui_Window_Finish;
+   --  Final part of window implementation. Should run the window with whatever
+   --  is added to it before this procedure is used.
 
 end Pegui;
