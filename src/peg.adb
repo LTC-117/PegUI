@@ -38,7 +38,6 @@ package body Peg is
 
    procedure Pegui_End is
    begin
-      --Gtk.Window.Show (Main_Window);
       Main_Window.Show_All;
       Gtk.Main.Main;
    end Pegui_End;
