@@ -16,19 +16,18 @@ package Peg is
    --  any other thing that could be considered fundamental and basic for the
    --  application. For now, the functions must be focused in the window.
 
-   --------------------
+   ---------------------
    --  Application types
 
-
-   -----------------------------------------
+   --------------------------------------
    --  Application fundamental variables.
 
-   Window_Height  :  constant Gint  := 500;
-   Window_Width   :  constant Gint  := 800;
-   Main_Window    :  Gtk_Window;
-   Button         :  Gtk_Widget;
+   Window_Height : constant Gint  := 500;
+   Window_Width  : constant Gint  := 800;
+   Main_Window   : Gtk_Window;
+   Button        : Gtk_Widget;
 
-   ----------------------------------------------
+   -----------------------------------------------
    --  Application basic procedures and functions.
 
    procedure Pegui_Begin;
