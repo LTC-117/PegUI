@@ -10,6 +10,12 @@ package Peg.Widgets is
 
    --  TODO : Implement button creation types, variables and methods.
 
+   type Widget_Button_Bar_Response is (Options, Configurations, Help);
+
    function Test_Pegui_Widgets return Boolean;
+
+   function Widget_Render_Button_Bar return Widget_Button_Bar_Response;
+   --  Function to render the button bar at the top of the window.
+   --  Bar must have options like 'Configurations', 'Help' and ''
 
 end Peg.Widgets;
