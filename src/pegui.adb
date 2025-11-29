@@ -3,14 +3,15 @@ with Gtk.Window;  use Gtk.Window;
 with Gtk.Widget;  use Gtk.Widget;
 with Gtk.Table;   use Gtk.Table;
 with Gtk.Button;  use Gtk.Button;
-with Gtk.Button_Box;  use Gtk.Button_Box;
 with Gtk.Box;     use Gtk.Box;
 with Glib;        use Glib;
 with Gtk.Menu;    use Gtk.Menu;
 with Gtk.Enums;   use Gtk.Enums;
 with Gtk.Frame;   use Gtk.Frame;
+with Gtk.Grid;    use Gtk.Grid;
 
 with Ada.Unchecked_Conversion;
+with Gtk.Button_Box;  use Gtk.Button_Box;
 with Gdk.Event;
 with Gtk.Main;
 with Gtk.Style;   use Gtk.Style;
@@ -23,36 +24,20 @@ with Peg.UI;       use Peg.UI;
 
 procedure Pegui is
 
-   Btn     : Gtk_Button;
-   Lbl     : Gtk_Label;
-   Box     : Gtk_Box;
-   VBox    : Gtk_Vbox;
-   Menu    : Gtk_Menu;
-   Builder : Gtkada_Builder;
-   Layout  : Gtk_Button_Box_Style;
+   Button : Gtk_Button;
 
 begin
    Pegui_Begin;
 
-      Gtk_New_Vbox (Box => Vbox, Homogeneous => True);
-      Add (Main_Window, VBox);
+      Button := Gtk.Button.Gtk_Button_New_With_Mnemonic ("Hello!");
+      Gtk.Grid.Attach
+         (Self   => Peg.Main_Grid,
+          Child  => Button,
+          Left   => 0,
+          Top    => -10,
+          Width  => 50,
+          Height => 1);
 
-      Gtk_New (Lbl, "Well well well, it works");
-      Pack_Start (In_Box => VBox,
-                  Child  => Lbl,
-                  Expand => False,
-                  Fill   => False);
-
-      Gtk_New_Hbox (Box => Box, Homogeneous => True);
-      Pack_Start (In_Box => VBox, Child => Box, Expand => False);
-
-      Gtk_New (Btn, "taquipariu");
-      Pack_Start (In_Box => Box,
-                  Child  => Btn,
-                  Expand => False,
-                  Fill   => False);
-
-      --  Pegui.Main_Window.Add (VBox);
 
    Pegui_End;
 end Pegui;
