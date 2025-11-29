@@ -1,3 +1,5 @@
+with Gtk.Grid; use Gtk.Grid;
+
 package Peg.Widgets is
 
    --  This package implements types and fundamental functionalities for the
@@ -10,11 +12,10 @@ package Peg.Widgets is
 
    --  TODO : Implement button creation types, variables and methods.
 
-   type Widget_Button_Bar_Response is (Options, Configurations, Help);
+   type Widget_Button_Bar_Response is
+      (Options, Configurations, Help);
 
-   function Test_Pegui_Widgets return Boolean;
-
-   function Widget_Render_Button_Bar return Widget_Button_Bar_Response;
+   function Widgets_Render_Button_Bar return Gtk_Grid;
    --  Function to render the button bar at the top of the window.
    --  Bar must have options like 'Configurations', 'Help' and ''
 
