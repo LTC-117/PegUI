@@ -8,7 +8,10 @@ package Peg.UI is
    --  each state of the application's state machine. Then it will be up to the
    --  main procedure to manage each state generated here.
 
-   function Test_Pegui_UI return Boolean;
-   --  Merely here to test if the package would work. Remove soon.
+   type UI_Screen_State is (Main, Video, Audio);
+
+   function UI_Main_Screen return UI_Screen_State;
+   function UI_Video_Screen return UI_Screen_State;
+   function UI_Audio_Screen return UI_Screen_State;
 
 end Peg.UI;
