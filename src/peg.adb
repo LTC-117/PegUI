@@ -27,19 +27,19 @@ package body Peg is
 
       Gtk.Window.Set_Default_Size
          (Window => Main_Window,
-          Width => Window_Width,
+          Width  => Window_Width,
           Height => Window_Height);
 
       Gtk_New_Vbox (Box => Main_Box, Homogeneous => True, Spacing => 0);
       Add (Main_Window, Main_Box);
 
       Main_Grid := Gtk.Grid.Gtk_Grid_New;
-      Pack_Start (In_Box => Main_Box,
-                  Child  => Main_Grid,
-                  Expand => False,
-                  Fill   => False,
-                  Padding => 0);
-
+      Pack_Start
+         (In_Box  => Main_Box,
+          Child   => Main_Grid,
+          Expand  => False,
+          Fill    => False,
+          Padding => 0);
    end Pegui_Begin;
 
    ---------------
