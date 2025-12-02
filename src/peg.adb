@@ -1,10 +1,11 @@
-with Gtk.Button;
-with Gtk.Main;
+with Gtk.Widget;  use Gtk.Widget;
+with Gtk.Button;  use Gtk.Button;
+with Gtk.Main;    use Gtk.Main;
 with Gtk.Application;
+with Gtk.Container;
 
 with Gtk.Label;   use Gtk.Label;
 with Gtk.Window;  use Gtk.Window;
-with Gtk.Widget;  use Gtk.Widget;
 with Gtk.Table;   use Gtk.Table;
 with Gtk.Button;  use Gtk.Button;
 with Glib;        use Glib;
@@ -24,21 +25,24 @@ package body Peg is
 
       Gtk.Window.Gtk_New (Main_Window);
       Gtk.Window.Set_Title (Main_Window, "PegUI");
-
       Gtk.Window.Set_Default_Size
          (Window => Main_Window,
           Width  => Window_Width,
           Height => Window_Height);
 
       Gtk_New_Vbox (Box => Main_Box, Homogeneous => True, Spacing => 0);
+      Set_Hexpand (Main_Box, True);
+      Set_Vexpand (Main_Box, True);
       Add (Main_Window, Main_Box);
 
       Main_Grid := Gtk.Grid.Gtk_Grid_New;
+      Set_Hexpand (Main_Grid, True);
+      Set_Vexpand (Main_Grid, True);
       Pack_Start
          (In_Box  => Main_Box,
           Child   => Main_Grid,
-          Expand  => False,
-          Fill    => False,
+          Expand  => True,
+          Fill    => True,
           Padding => 0);
    end Pegui_Begin;
 
