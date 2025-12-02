@@ -1,5 +1,7 @@
 with Gtk.Button;  use Gtk.Button;
-with Peg;   use Peg;
+with Gtk.Grid;    use Gtk.Grid;
+
+with Peg;         use Peg;
 
 package body Peg.UI is
 
@@ -13,14 +15,16 @@ package body Peg.UI is
       Button : Gtk_Button;
    begin
       Button := Gtk.Button.Gtk_Button_New_With_Mnemonic ("Main");
+      Set_Halign (Button, Align_Center);
+      Set_Valign (Button, Align_Center);
 
       Gtk.Grid.Attach
          (Self   => Peg.Main_Grid,
           Child  => Button,
           Left   => 0,
-          Top    => -10,
-          Width  => 50,
-          Height => 1);
+          Top    => 0,
+          Width  => 15,
+          Height => 15);
 
       return Main;
    end UI_Main_Screen;
