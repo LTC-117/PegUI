@@ -23,6 +23,8 @@ package body Peg is
    begin
       Gtk.Main.Init;
 
+      --  Initialize Application's Main Window
+
       Gtk.Window.Gtk_New (Main_Window);
       Gtk.Window.Set_Title (Main_Window, "PegUI");
       Gtk.Window.Set_Default_Size
@@ -30,10 +32,14 @@ package body Peg is
           Width  => Window_Width,
           Height => Window_Height);
 
+      --  Initialize Application's Main Box
+
       Gtk_New_Vbox (Box => Main_Box, Homogeneous => True, Spacing => 0);
       Set_Hexpand (Main_Box, True);
       Set_Vexpand (Main_Box, True);
       Add (Main_Window, Main_Box);
+
+      --  Initialize Application's Main Grid
 
       Main_Grid := Gtk.Grid.Gtk_Grid_New;
       Set_Hexpand (Main_Grid, True);
