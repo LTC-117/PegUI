@@ -1,3 +1,5 @@
+with Gtk.Button;  use Gtk.Button;
+
 package Peg.UI is
 
    --  This package implements an abstraction layer for the GUI of the app.
