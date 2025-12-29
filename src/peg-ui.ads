@@ -1,4 +1,5 @@
 with Gtk.Button;  use Gtk.Button;
+with Gtk.Grid;    use Gtk.Grid;
 
 package Peg.UI is
 
@@ -12,6 +13,9 @@ package Peg.UI is
 
    type UI_Screen_State is (Main, Video, Audio);
 
+   UI_Pegui_State : UI_Screen_State;
+
+   procedure Render_UI;
    function UI_Main_Screen return UI_Screen_State;
    function UI_Video_Screen return UI_Screen_State;
    function UI_Audio_Screen return UI_Screen_State;
